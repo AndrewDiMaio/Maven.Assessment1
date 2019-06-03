@@ -1,6 +1,5 @@
 package com.zipcodewilmington.assessment1.part2;
 
-import com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList;
 
 import java.io.ObjectInputStream;
 import java.util.*;
@@ -36,12 +35,12 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        List result = new LinkedList();
+  /*      List result = new LinkedList();
         for (Object item : objectArray)
                 if(!objectToRemove.equals(item)){
                     result.add(item);
-                }
-    return result.toArray();
+    */
+    return null;
     }
 
     /**
@@ -73,13 +72,13 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        List<Object> list1 = Arrays.asList(objectArray);
+  /*      List<Object> list1 = Arrays.asList(objectArray);
         List<Object> list2 = Arrays.asList(objectArrayToAdd);
 
         List<Object> newList = Stream.concat(list1.stream(), list2.stream()).collect(Collectors.toList());
 
         System.out.println(newList);
-
-        return newList.toArray();
+*/
+        return null;
     }
 }
