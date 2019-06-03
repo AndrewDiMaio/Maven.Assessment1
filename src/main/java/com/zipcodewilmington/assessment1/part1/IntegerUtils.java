@@ -42,9 +42,9 @@ public class IntegerUtils {
        int valLength = valLen.length();
         for (int i = 0; i<valLength; i++) {
             char temp = valLen.charAt(i);
-            reverse.append(reverse.append(temp));
+            reverse.append(temp);
             System.out.println(reverse.toString());
-            
-        }return null;
+
+        }return Integer.valueOf(reverse.reverse().toString());
     }
 }
