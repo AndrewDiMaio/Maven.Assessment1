@@ -39,12 +39,12 @@ public class IntegerUtils {
     public static Integer reverseDigits(Integer val) {
         StringBuilder reverse = new StringBuilder();
         String valLen = val.toString();
-        int valLength = valLen.length();
-        for (int i = valLength-1; i>-1; i--){
-            char temp = val.toString().charAt(i);
+       int valLength = valLen.length();
+        for (int i = 0; i<valLength; i++) {
+            char temp = valLen.charAt(i);
             reverse.append(reverse.append(temp));
-        }
-        int test = Integer.parseInt(reverse.toString());
-        return test;
+            System.out.println(reverse.toString());
+            
+        }return null;
     }
 }
