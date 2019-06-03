@@ -1,7 +1,11 @@
 package com.zipcodewilmington.assessment1.part2;
 
-import java.util.LinkedList;
-import java.util.List;
+import com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList;
+
+import java.io.ObjectInputStream;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by leon on 2/16/18.
@@ -46,6 +50,9 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
+
+        //List<Object> objectList = Arrays.asList(objectArray);
+        //objectList.
         return null;
     }
 
@@ -66,6 +73,13 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+        List<Object> list1 = Arrays.asList(objectArray);
+        List<Object> list2 = Arrays.asList(objectArrayToAdd);
+
+        List<Object> newList = Stream.concat(list1.stream(), list2.stream()).collect(Collectors.toList());
+
+        System.out.println(newList);
+
+        return newList.toArray();
     }
 }
