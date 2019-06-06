@@ -8,6 +8,6 @@ public class Jumper {
     public int jumps(int k, int j) {
 
 
-        return ((k/j)+(k%j));
+        return (k/j)+(k%j);
     }
 }

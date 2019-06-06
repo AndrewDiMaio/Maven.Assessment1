@@ -30,7 +30,7 @@ public class ArrayUtilsTest {
         Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
 
         // When
-        Integer[] actual = (Integer[]) ArrayUtils.removeValue(inputArray, valueToRemove);
+        Object[] actual = (Object[]) ArrayUtils.removeValue(inputArray, valueToRemove);
 
         // Then
         UnitTestingUtils.assertArrayEquality(expected, actual);
