@@ -1,6 +1,8 @@
 package com.zipcodewilmington.assessment1.part2;
 
 
+import com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -45,9 +47,23 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-    //Arrays.
+        //List<Object> list = new ArrayList<>(Arrays.asList(objectArray));
+        Object max = new Object();
+        for (int i = 0; i<objectArray.length; i++){
+            int currMax = 0;
+            for (int j = 0; j<objectArray.length; j++){
+                int count = 0;
+                if (objectArray[i].equals(objectArray[j])) {
+                count++;
+                    if (count > currMax){
+                        currMax = count;
+                        max = objectArray[i];
+                    }
+                }
+            }
+        }
 
-        return null;
+        return max;
     }
 
 
@@ -57,8 +73,13 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
+      //  for (int i = 0; i<objectArray.length; i++){
+        //   if (getNumberOfOccurrences(objectArray[i])
+        //}
+
         return null;
     }
+
 
     /**
      * @param objectArray      an array of any type of Object
@@ -67,7 +88,10 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-
-        return null;
+    List<Object> newList = new ArrayList<>(Arrays.asList(objectArray));
+    List<Object> mergeList = new ArrayList<>(Arrays.asList(objectArrayToAdd));
+    newList.addAll(mergeList);
+    Integer[] finalList = newList.toArray(new Integer[0]);
+        return finalList;
     }
 }
